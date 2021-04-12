@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
+
 import './TrafficLight.css';
 const RED = 0;
 const ORANGE = 1; 
@@ -7,6 +9,7 @@ class TrafficLight extends Component{
     constructor(){
         super();
         this.currentColor = RED;
+
     }
 
     getNextColor(color){
@@ -23,9 +26,15 @@ class TrafficLight extends Component{
     render(){
         return(
             <div className="TrafficLight">
-                <div className="bulb red"/>
-                <div className="bulb orange"/>
-                <div className="bulb green"/>
+                <div className={classNames('bulb','red',{
+                    active: this.currentColor === RED
+                })}/>
+                <div className={classNames('bulb','orange',{
+                    active: this.currentColor === ORANGE
+                })}/>
+                <div className={classNames('bulb','GREEN',{
+                    active: this.currentColor === GREEN
+                })}/>
             </div>
         )
     }
