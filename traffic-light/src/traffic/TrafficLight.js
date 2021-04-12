@@ -10,6 +10,11 @@ class TrafficLight extends Component{
         super();
         this.currentColor = RED;
 
+        setInterval(() =>
+           {
+            console.log(this.currentColor);   
+            this.currentColor = this.getNextColor(this.currentColor);}
+        ,1000);
     }
 
     getNextColor(color){
@@ -32,7 +37,7 @@ class TrafficLight extends Component{
                 <div className={classNames('bulb','orange',{
                     active: this.currentColor === ORANGE
                 })}/>
-                <div className={classNames('bulb','GREEN',{
+                <div className={classNames('bulb','green',{
                     active: this.currentColor === GREEN
                 })}/>
             </div>
