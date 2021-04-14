@@ -6,9 +6,9 @@
     width: 64px;
     height: 64px;
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 60%;
     margin: 10px;
-    opacity: .2;
+    opacity: 0.2;
 }
 .TrafficLight .bulb.active{
     opacity: 1;
