@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
-
 import './TrafficLight.css';
 const RED = 0;
 const ORANGE = 1; 
