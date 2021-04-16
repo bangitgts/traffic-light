@@ -8,11 +8,18 @@ class TrafficLight extends Component{
     constructor(props){
         super(props);
         this.state = { currentColor : RED}
+       
+    }
+    componentDidMount() {
         setInterval(() =>
            {       
              this.setState( {currentColor: this.changeColor(this.state.currentColor)});
           },1000);
     }
+    clickChange(){
+        console.log('abc')
+    }
+   
     changeColor(color) {
        switch(color)
             {
