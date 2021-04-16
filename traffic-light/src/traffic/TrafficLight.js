@@ -10,21 +10,23 @@ class TrafficLight extends Component{
         this.state = { currentColor : RED}
         setInterval(() =>
            {       
-            this.state.currentColor = this.getNextColor(this.state.currentColor);
-        },1000);
+             this.setState( {currentColor: this.changeColor(this.state.currentColor)});
+          },1000);
     }
-    getNextColor(color){
-        switch(color){
-            case RED:
-                return ORANGE;
-            case ORANGE:
-                return GREEN;
-            default:
-                return RED;
-        }
+    changeColor(color) {
+       switch(color)
+            {
+                case RED: 
+                    return ORANGE;
+                case ORANGE: 
+                    return GREEN;
+                default: 
+                    return RED
+            }    
     }
-
-    render(){
+    
+    render()
+    {
         const { currentColor } = this.state;
         return(
             <div className="TrafficLight">

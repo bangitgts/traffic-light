@@ -5,8 +5,7 @@
 .TrafficLight .bulb{
     width: 64px;
     height: 64px;
-    display: inline-block;
-    border-radius: 60%;
+  
     margin: 10px;
     opacity: 0.2;
 }
